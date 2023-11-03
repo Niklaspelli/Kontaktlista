@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontaktlista</title>
+
+    <link href="kontaktlista.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <h1>Kontaktlistan!</h1>
+
+      <div class="container">
+        <form id="contact-form">
+          <input
+            type="text"
+            name="new-contact-input"
+            id="new-contact-input"
+            placeholder="Namn"
+          />
+
+          <input
+            type="text"
+            name="contact-phone-input"
+            id="contact-phone-input"
+            placeholder="Telefon"
+          />
+          <input type="submit" id="new-contact" value="Skapa" class="button" />
+          <button onclick="deleteAll()">Radera allt</button>
+        </form>
+        <div id="form-messages"></div>
+      </div>
+
+      <section class="contact-list">
+        <h2>Dina kontakter!</h2>
+        <div id="contacts">
+          <!--
+        <div class="contacts">
+          <div class="contact">
+            <div class="content">
+              <input type="text" class="text" value="Namn" />
+              <input type="text" class="text" value="Telefon" />
+            </div>
+            <div class="actions">
+              <button class="edit">Ändra</button>
+              <button class="delete">Radera</button>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <script src="kontaktlista.js"></script>
+  </body>
+</html>
