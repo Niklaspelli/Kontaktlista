@@ -1,0 +1,55 @@
+h1, h2{
+    color: rgb(255, 252, 252);
+    text-align: center;
+}
+
+body{
+    background-color: rgb(48, 27, 27);
+}
+
+.container{
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    position: relative;
+    left: 40%;
+    align-items: center;
+    text-align: center;
+    box-shadow: 10px 10px rgb(54, 54, 54);
+    padding: 20px;
+    border-radius: 10%;
+    color: white;
+    
+}
+
+input{
+    margin: 20px;
+    border-radius: 10%;
+    height: 20px;
+    border: none;
+
+    
+}
+
+.button{
+    border-radius: 15%;
+    border: none;
+    width: 60px;
+    height: 40px;
+    background-color: lightblue;
+}
+
+.contact-list{
+    display: flex;
+    width: 320px;
+    height: 100%;
+    background-color: brown;
+    position: relative;
+    left: 40%;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10%;
+    border: 40px black;
+    
+}
