@@ -27,12 +27,12 @@ window.addEventListener("load", () => {
        const nameInputValue = input.value;
        const phoneNumberInputValue = phone.value;
 
-       if (nameInputValue.value === "") {
+       if (nameInputValue === "") {
         errorMessages += 'Fälten måste fyllas i';
       formMessages.innerHTML = "OBS! Fyll i namnet!";
         return;
        }
-       if (phoneNumberInputValue.value === "") {
+       if (phoneNumberInputValue === "") {
         errorMessages += 'Fälten måste fyllas i';
         formMessages.innerHTML = "OBS! Fyll i nummer!";
         return;  
@@ -44,9 +44,9 @@ window.addEventListener("load", () => {
         formMessages.innerHTML = '<p style.color="green">Klart!</p>';
       } else {
       
-        formMessages.innerHTML = `<p> Kontakten: <b><i style="color: lightblue">${nameInputValue}</i></b> inlagd! </p>`;
+        formMessages.innerHTML = `<p> Kontakten: <b><i style="color: green">${nameInputValue}</i></b> inlagd! </p>`;
         setTimeout(() => {
-          formMessages.innerHTML = "Skriv in nästa kontakt!";
+          formMessages.innerHTML = "Listan uppdaterad";
         }, 2000);
       }
 
