@@ -91,6 +91,22 @@ button{
     
 }
 
+input[type="text"]::placeholder {
+    text-align: center;
+  }
+  
+  /*#removeIfNoRegex*/
+  input:invalid {
+    border: red solid 3px;
+  }
+  /*#removeIfNoRegex*/
+  .hidden {
+    visibility: hidden;
+  }
+  /*#removeIfNoRegex*/
+  .visible {
+    visibility: visible;
+  }
 
 
 

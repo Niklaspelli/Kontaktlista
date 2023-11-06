@@ -19,17 +19,18 @@
             id="new-contact-input"
             placeholder="Namn"
           />
-
           <input
             type="text"
-            name="contact-phone-input"
             id="contact-phone-input"
             placeholder="Telefon"
           />
           <input type="submit" id="new-contact" value="Skapa" class="button" />
-          <button onclick="deleteAll()">Radera allt</button>
+          <button onclick="deleteAllContacts()" class="button">Radera allt</button>
         </form>
         <div id="form-messages"></div>
+        <i style="color: red" class="hidden" id="phoneErrorMessage"
+              ></i
+            >
       </div>
 
       <section class="contact-list">
@@ -41,15 +42,3 @@
     <script src="kontaktlista.js"></script>
   </body>
 </html>
-<!--
-        <div class="contacts">
-          <div class="contact">
-            <div class="content">
-              <input type="text" class="text" value="Namn" />
-              <input type="text" class="text" value="Telefon" />
-            </div>
-            <div class="actions">
-              <button class="edit">Ändra</button>
-              <button class="delete">Radera</button>
-            </div>
-          </div> -->
