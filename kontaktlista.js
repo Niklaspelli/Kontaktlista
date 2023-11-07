@@ -40,7 +40,7 @@ window.addEventListener("load", () => {
       } 
   
       if (formMessages === "") {
-        formMessages.innerHTML = '<p style.color="green">Klart!</p>';
+        formMessages.innerHTML = 'Klart!';
       } else {
       
         formMessages.innerHTML = `<p> Kontakten: <b><i style="color: green">${nameInputValue}</i></b> inlagd! </p>`;
@@ -69,10 +69,9 @@ contact_content_el.appendChild(contact_input_el);
 const phone_input_i_el = document.createElement("i");
 phone_input_i_el.style = "color: white;";
 phone_input_i_el.classList.add("hidden");
-phone_input_i_el.innerHTML = "Kan bara innehålla siffror";
 
 
-    
+
 const phone_input_el = document.createElement("input");
 phone_input_el.classList.add("text");
 phone_input_el.type = "text";
