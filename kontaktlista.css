@@ -21,18 +21,15 @@ h1{
 }
 
 h2{
-  
+  margin-bottom: 40px;
     text-align: center;
-    margin-bottom: 20px;
-    display: inline;
-   
-
 }
 body{
-    display: flex;
+    
     flex-direction: column;
     background: var(--dark);
     color: white;
+    align-content: center;
 }
 
 .container{
@@ -48,9 +45,26 @@ body{
     padding: 10px;
     border-radius: 10%;
     color: white;
+    display: inline-block;
     
 }
-
+.contact-list {
+    margin-top: 30px;
+    width: 300px;
+    max-height: 100%;
+    background-color: black;
+    position: relative;
+    left: 40%;
+    padding: 40px;
+    border-radius: 10%;
+    border: 40px black;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    box-shadow: 10px 10px rgb(54, 54, 54);
+    
+    
+}
 #new-contact-input, #contact-phone-input{
     margin: 20px;
     border-radius: 5%;
@@ -63,41 +77,36 @@ body{
     
 }
 
-button{
+button, .button{
     border-radius: 15%;
-    border: none;
-    width: 50px;
-    height: 20px;
-    background-color: white;
+    border: white;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(46, 45, 45);
+    color:white;
     appearance: none;
     outline: none;
-    padding: 3px;
+    
     margin: 10px;
+    
     
 }
 
-.contact-list {
-    display: flex;
-    width: 350px;
-    height: 100%;
-    background-color: black;
-    position: relative;
-    left: 40%;
-    margin: 30px;
-    padding: 50px;
-    border-radius: 10%;
-    border: 40px black;
-    
-    
-}
+
 
 input[type="text"]::placeholder {
     text-align: center;
+   
   }
+
+  input[type="number"]::placeholder {
+    text-align: center;
+   
+  }  
   
  
   input:invalid {
-    border: green solid 3px;
+    border: rgb(128, 0, 0) solid 3px;
   }
   
   .hidden {
@@ -111,7 +120,10 @@ input[type="text"]::placeholder {
 
 
 
-#form-messages {
+#form-messages  {
     color: red;
 
+}
+#phoneErrorMessage {
+    color: purple;
 }

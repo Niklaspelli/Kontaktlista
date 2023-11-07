@@ -20,22 +20,24 @@
             placeholder="Namn"
           />
           <input
-            type="text" 
+            type="number" 
             id="contact-phone-input"
             placeholder="Telefon"
           />
           <input type="submit" id="new-contact" value="Skapa" class="button" />
-          <button onclick="deleteAllContacts()" class="button">Radera allt</button>
+          <button onclick="deleteAllContacts()" >Töm</button>
         </form>
         <div id="form-messages"></div>
-        <i style="color: red" class="hidden" id="phoneErrorMessage"
-              >hejsan på dejsan</i
+      
+        <i class="hidden" id="phoneErrorMessage"
+              ></i
             >
       </div>
 
       <section class="contact-list">
         <h2>Dina kontakter!</h2>
           <div id="contacts"></div>
+          
         </div>
       </section>
     </main>
