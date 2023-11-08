@@ -37,11 +37,7 @@ window.addEventListener("load", () => {
         formMessages.innerHTML = "OBS! Fyll i nummer!";
         
         return;  
-      } 
-  
-      if (formMessages === "") {
-        formMessages.innerHTML = 'Klart!';
-      } else {
+      }  else {
       
         formMessages.innerHTML = `<p> Kontakten: <b><i style="color: green">${nameInputValue}</i></b> inlagd! </p>`;
         setTimeout(() => {
@@ -112,12 +108,15 @@ contact_edit_el.addEventListener("click", () => {
     contact_input_el.removeAttribute("readonly");
     phone_input_el.removeAttribute("readonly");
     contact_input_el.focus(); 
+    
     } else {
         if (!phone_input_el.validity.valid) {
             phone_input_i_el.classList.replace("hidden", "visible");
             return;
           }
-          phone_input_i_el.classList.replace("visible", "hidden");
+
+
+    phone_input_i_el.classList.replace("visible", "hidden");
 
     contact_edit_el.innerText = "Ändra";
     contact_input_el.setAttribute("readonly", "readonly");
