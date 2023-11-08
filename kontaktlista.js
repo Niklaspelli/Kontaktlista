@@ -59,6 +59,7 @@ contact_input_el.type = "text";
 contact_input_el.value = nameInputValue;
 contact_input_el.disabled = true;
 contact_input_el.setAttribute("readonly", "readonly");
+contact_input_el.required = true; 
 contact_content_el.appendChild(contact_input_el);
 
 
@@ -74,6 +75,12 @@ phone_input_el.type = "text";
 phone_input_el.value = phoneNumberInputValue;
 phone_input_el.disabled = true;
 phone_input_el.setAttribute("readonly", "readonly");
+phone_input_el.required = true;
+phone_input_el.maxlength="10";
+
+
+
+
 
 const phone_content_div = document.createElement("div");
 phone_content_div.appendChild(phone_input_i_el);
@@ -104,13 +111,14 @@ contact_edit_el.addEventListener("click", () => {
     if (contact_edit_el.innerText.toLowerCase() =="ändra") {
     contact_edit_el.innerText = "Spara";
     contact_input_el.disabled = false; 
+    contact_input_el.required = true; 
     phone_input_el.disabled = false; 
     contact_input_el.removeAttribute("readonly");
     phone_input_el.removeAttribute("readonly");
     contact_input_el.focus(); 
     
     } else {
-        if (!phone_input_el.validity.valid) {
+        if (!phone_input_el.validity.valid || !contact_input_el.validity.valid ) {
             phone_input_i_el.classList.replace("hidden", "visible");
             return;
           }

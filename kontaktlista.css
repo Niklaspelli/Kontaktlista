@@ -10,18 +10,11 @@
     font-family: monospace;
 }
 
-
-
-
-
-
 h1{
     position: relative;
     left: 42%;
-    
     margin: 20px;
-    font-weight: 300;
-    
+    font-weight: 300;    
 }
 
 h2{
@@ -29,28 +22,24 @@ h2{
     text-align: center;
 }
 body{
-    
-    
+  min-height: 100vh;
+   
     background: var(--dark);
     color: white;
+    background-size: cover;
   
 }
 
-
-
-
-
+main{
+  width: 100%; 
+  place-content: center;
+  margin: 0;
+}
 .container, .contact-list{
-
-    
-   
     position: relative;
    left: 40%;
     align-content: center;
-    justify-content: center; 
-   
-    
-    
+    justify-content: center;   
 }
 
 
@@ -74,18 +63,13 @@ body{
     width: 300px;
     max-height: 100%;
     background: linear-gradient(black, gray 0%, transparent 100%);
-
-   
     padding: 40px;
     border-radius: 10%;
     border: 40px black;
     align-items: center;
     text-align: center;
     align-content: center;
-    box-shadow: 10px 10px rgb(41, 39, 39);
-   
-    
-    
+    box-shadow: 10px 10px rgb(41, 39, 39);   
 } 
 #new-contact-input, #contact-phone-input{
     margin: 20px;
@@ -110,7 +94,7 @@ button, .button{
     appearance: none;
     outline: none;
     margin: 10px;
-   
+    cursor: pointer;
 }
 
 .text{
