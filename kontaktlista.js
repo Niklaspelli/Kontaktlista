@@ -4,22 +4,7 @@ window.addEventListener("load", () => {
     const phone = document.querySelector("#contact-phone-input");
     const list_el = document.querySelector("#contacts");
     let formMessages = document.getElementById('form-messages');
-    
-
-
-
-    /* phone.addEventListener("keyup", (e) => {
-        const phoneInputInvalid = e.target.validity.valid;
-        const errorMessage = document.querySelector("#phoneErrorMessage");
-    
-        if (!phoneInputInvalid) {
-          errorMessage.classList.replace("hidden", "visible");
-          phone.validity.valid = false;
-        } else {
-          errorMessage.classList.replace("visible", "hidden");
-          phone.validity.valid = true;
-        }
-      }); */
+  
 
    form.addEventListener("submit", (e) => {
         e.preventDefault();
