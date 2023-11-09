@@ -17,7 +17,7 @@ h1{
 }
 
 h2{
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   text-align: center;
 }
 body{
@@ -54,7 +54,7 @@ main{
    margin-left: 20px;
     width: 300px;
     background: linear-gradient(black, gray 0%, transparent 100%);
-    padding: 40px;
+    padding: 10px;
     border-radius: 10%;
     border: 40px black;
     align-items: center;
@@ -118,13 +118,15 @@ input[type="text"]::placeholder {
 
 #form-messages  {
     color: red;
-    font-size: large;
+    font-size: 15px;
 
 }
-#phoneErrorMessage {
-    color: purple;
-}
 
+#succeed-messages  {
+  color: rgb(0, 255, 13);
+  font-size: large;
+
+}
 
 
 @media (max-width: 800px) {

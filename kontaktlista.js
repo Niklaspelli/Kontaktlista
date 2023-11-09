@@ -4,7 +4,8 @@ window.addEventListener("load", () => {
     const phone = document.querySelector("#contact-phone-input");
     const list_el = document.querySelector("#contacts");
     let formMessages = document.getElementById('form-messages');
-  
+    let succeedMessages = document.getElementById('succeed-messages');
+    
 
    form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -13,20 +14,16 @@ window.addEventListener("load", () => {
        const phoneNumberInputValue = phone.value;
 
        if (nameInputValue === "") {
-      
-      formMessages.innerHTML = "OBS! Fyll i namnet!";
+      formMessages.innerHTML = "OBS! Fyll i namn!";
         return;
        }
        if (phoneNumberInputValue === "") {
-       
-        formMessages.innerHTML = "OBS! Fyll i nummer!";
-        
+        formMessages.innerHTML = "OBS! Fyll i telefonnummer!";
         return;  
       }  else {
-      
-        formMessages.innerHTML = `<p> Kontakten: <b><i style="color: green">${nameInputValue}</i></b> inlagd! </p>`;
+        formMessages.innerHTML = `<p style="color: white"> Kontakten: <b><i style="color: orange">${nameInputValue}</i></b> inlagd! </p>`;
         setTimeout(() => {
-          formMessages.innerHTML = "Listan uppdaterad";
+          succeedMessages.innerHTML = "Lägg till ny kontakt!";
         }, 2000);
       }
 
@@ -47,12 +44,8 @@ contact_input_el.setAttribute("readonly", "readonly");
 contact_input_el.required = true; 
 contact_content_el.appendChild(contact_input_el);
 
-
 const phone_input_i_el = document.createElement("i");
-phone_input_i_el.style = "color: white;";
 phone_input_i_el.classList.add("hidden");
-
-
 
 const phone_input_el = document.createElement("input");
 phone_input_el.classList.add("text");
@@ -62,10 +55,6 @@ phone_input_el.disabled = true;
 phone_input_el.setAttribute("readonly", "readonly");
 phone_input_el.required = true;
 phone_input_el.maxlength="10";
-
-
-
-
 
 const phone_content_div = document.createElement("div");
 phone_content_div.appendChild(phone_input_i_el);
@@ -107,8 +96,6 @@ contact_edit_el.addEventListener("click", () => {
             phone_input_i_el.classList.replace("hidden", "visible");
             return;
           }
-
-
     phone_input_i_el.classList.replace("visible", "hidden");
 
     contact_edit_el.innerText = "Ändra";
@@ -123,7 +110,6 @@ contact_edit_el.addEventListener("click", () => {
         });
     });
 });
-
 function deleteAllContacts() {
     const parentElement = document.querySelector("#contacts");
   
